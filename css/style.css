@@ -13,11 +13,11 @@ body {
     line-height: 2;
 }
 
-header {
+.encabezado {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 
