@@ -1,52 +1,155 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norman Wines</title>
+    <title>Norman Wines - Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <a href="">
-            <img class="logo" src="../img/logo.png" alt="Logo de Norman Wines" class="logo">
+    <header class="encabezado d-none d-lg-block">
+        <a href="../index.html">
+            <img class="logo" src="../img/logo.png" alt="Logo de Norman Wines">
         </a>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="testimonios.html">Testimonios</a></li>
-                <li><a href="sucursales.html">Sucursales</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
-        <h1> Norman Wines </h1>
 
-        <h2> Contacto </h2>
+    <div class="border-top py-4">
+        <div class="navbar navbar-expand-lg container navbar-light ">
+            <a class="navbar-brand d-lg-none" href="../index.html">
+                <img src="../img/logo.png" alt="Logo de Norman Wines" style="height: 80px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+       
+            <div id="navegacion" class="collapse navbar-collapse">
+                <nav class="navbar-nav container d-flex flex-md-row justify-content-md-between text-center">
+                    <a class="text-dark text-decoration-none" href="../index.html">Inicio</a>
+                    <a class="text-dark text-decoration-none" href="./nosotros.html">Nosotros</a>
+                    <a class="text-dark text-decoration-none" href="./productos.html">Productos</a>
+                    <a class="text-dark text-decoration-none" href="./galeria.html">Galería</a>
+                    <a class="text-dark text-decoration-none" href="./contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </div>
 
-        <form>
-            <label for="nombre"> Nombre </label>
-            <input type="text" id="nombre">
 
-            <label for="apellido"> Apellido </label>
-            <input type="text" id="nombre">
+    <main class="container-xl py-5">
+        <h2 class="text-center my-5">Contacto</h2>
 
-            <label for="mensaje"> Mensaje </label>
-            <textarea name="" id="" cols="35" rows="15" placeholder="Déjenos su consulta"></textarea>
+        <div class="row justify-content-center">
+            <form class="col-md-8 needs-validation" novalidate>
+                <fieldset>
+                    <legend class="bg-primary text-center text-white fs-2">Tus Datos</legend>
 
-            <input class="btnFormulario" type="submit">
-            <input class="btnFormulario" type="reset">
-        </form>
+                    <div class="mb-3">
+                        <label class="form-label" for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
+                        <span class="invalid-feedback">Hubo un error...</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="asunto">Asunto:</label>
+                        <input type="text" class="form-control" id="asunto" placeholder="Tu Asunto">
+                        <span class="valid-feedback">Muy bien!!</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Tu Email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="tel">Teléfono:</label>
+                        <input type="tel" class="form-control" id="tel" placeholder="Tu Teléfono">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="tel">Mensaje:</label>
+                        <textarea class="form-control" rows="10"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="bg-primary text-center text-white fs-2">País</legend>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="pais">País:</label>
+                        <select class="form-control" id="pais">
+                            <option value="">--Seleccione--</option>
+                            <option value="MX">México</option>
+                            <option value="PR">Perú</option>
+                            <option value="CO">Colombia</option>
+                            <option value="AR">Argentina</option>
+                            <option value="ES">España</option>
+                            <option value="CL">Chile</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="bg-primary text-center text-white fs-2">Información Extra</legend>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="cliente">Cliente:</label>
+                        <input name="tipo" type="radio" class="form-check-input" id="cliente" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="proveedor">Proveedor:</label>
+                        <input name="tipo" type="radio" class="form-check-input" id="proveedor" >
+                    </div>
+
+                </fieldset>
+
+                <div class="d-grid d-md-flex">
+                    <input class="btn btn-secondary fs-2 px-5 mt-5" type="submit" value="Enviar Formulario">
+                </div>
+            </form>
+        </div>
+        
     </main>
-    <footer>
-        <h3> Síguenos en nuestras redes sociales </h3>
-        <div class="redes">
-            <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="../img/instagram.png" alt=""></a>
-            <a class="redes" href="https://www.linkedin.com/" target="_blank"><img src="../img/linkedin.png" alt=""></a>
-            <a class="redes" href="https://www.x.com/" target="_blank"><img src="../img/x.png" alt=""></a>
+
+    <footer class="pt-5 mt-5 border-top">
+        <div class="container-xl mt-5">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="mb-4">Categorías</h3>
+                    <nav class="d-flex flex-column">
+                        <a class="text-dark text-decoration-none" href="#">Tinto</a>
+                        <a class="text-dark text-decoration-none" href="#">Blanco</a>
+                        <a class="text-dark text-decoration-none" href="#">Rosado</a>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="mb-4">Sobre Nosotros</h3>
+                    <nav class="d-flex flex-column">
+                        <a class="text-dark text-decoration-none" href="#">Nuestra Historia</a>
+                        <a class="text-dark text-decoration-none" href="#">Misión, Visión y Valores</a>
+                        <a class="text-dark text-decoration-none" href="#">Carreras</a>
+                        <a class="text-dark text-decoration-none" href="#">Política de Privacidad</a>
+                        <a class="text-dark text-decoration-none" href="#">Términos del Servicio</a>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="mb-4">Soporte</h3>
+                    <nav class="d-flex flex-column">
+                        <a class="text-dark text-decoration-none" href="#">Preguntas Frecuentes</a>
+                        <a class="text-dark text-decoration-none" href="#">Ayuda en Línea</a>
+                        <a class="text-dark text-decoration-none" href="#">Confianza y Seguridad</a>
+                    </nav>
+                </div>
+            </div>
+
+            <p class="mt-5 text-center fs-2">Todos los derechos Reservados. NormanWines</p>
         </div>
     </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
