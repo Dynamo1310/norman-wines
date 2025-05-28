@@ -21,17 +21,8 @@ body {
 }
 
 
-h1, h2, h3 {
+h2, h3 {
     font-family: 'Playfair Display', serif;
-}
-
-h1 {
-    font-size: 3.8rem;
-}
-@media (min-width: 768px) {
-    h1 {
-        font-size: 5rem;
-    }
 }
 
 h2 {
