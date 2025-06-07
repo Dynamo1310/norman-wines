@@ -21,12 +21,9 @@ Google Fonts (Playfair Display y Raleway)
 │
 ├── index.html
 ├── /css
-│   ├── bootstrap.min.css
 │   └── style.css
 ├── /img
 │   └── producto1.png, producto2.png, ...
-├── /js
-│   └── bootstrap.bundle.min.js
 └── /pages
     ├── nosotros.html
     ├── productos.html
@@ -43,9 +40,6 @@ Ejecutá desde consola:
 start index.html     # en Windows
 open index.html      # en macOS
 Nota: No requiere backend ni instalación de dependencias adicionales.
-
-📷 Capturas
-(Podés agregar aquí imágenes del sitio en diferentes dispositivos o secciones destacadas.)
 
 📌 Pendientes / Mejora futura
 Integración con pasarela de pago.
