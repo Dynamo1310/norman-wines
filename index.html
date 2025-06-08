@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Norman Wines - Inicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +17,11 @@
             <img class="logo" src="./img/logo.png" alt="Logo de Norman Wines">
         </a>
     </header>
+
     <div class="border-top py-4">
         <div class="navbar navbar-expand-lg container navbar-light ">
             <a class="navbar-brand d-lg-none" href="index.html">
-                <img src="./img/logo.png" alt="Logo de Norman Wines" style="height: 80px;">
+                <img src="./img/logo.png" alt="Logo de Norman Wines" style="height: 120px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
                 <span class="navbar-toggler-icon"></span>
@@ -37,10 +39,22 @@
         </div>
     </div>
 
-    <div class="hero"></div>
 
     <main class="container-xl py-5">
-        <h1 class="text-center my-5 display-3 fw-bold">Bienvenidos a Norman Wines</h1>
+        <!-- Imagen principal elegante -->
+        <section class="imagen-principal mb-5">
+            <div class="position-relative overflow-hidden rounded-4 shadow-lg">
+                <img src="./img/principal.jpg" alt="Norman Wines - Viñedos" class="img-fluid w-100" style="height: 400px; object-fit: cover;">
+                <div class="overlay-elegante position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white">
+                        <h2 class="display-4 fw-bold mb-3">Bienvenidos a Norman Wines</h2>
+                        <p class="lead">Tradición, calidad y pasión en cada copa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <h1 class="text-center my-5 display-3 fw-bold">Nuestros Productos Destacados</h1>
         <h2 class="text-center my-5">Nuestros Productos</h2>
 
         <div class="row g-0 pt-5 mb-4">

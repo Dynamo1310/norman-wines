@@ -1,0 +1,16 @@
+// ==================================================
+// ARCHIVO PRINCIPAL SASS - NORMAN WINES
+// ==================================================
+
+// Importar todos los parciales en el orden correcto
+@import 'variables';  // Variables y configuración
+@import 'base';       // Estilos base y tipografía
+@import 'components'; // Componentes específicos
+@import 'utilities';  // Utilidades y sobreescrituras
+
+// Comentario para compilación
+/* 
+ * Norman Wines - Stylesheet Principal
+ * Compilado desde SASS
+ * Versión: 2.0
+ */ 

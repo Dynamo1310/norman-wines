@@ -1,0 +1,79 @@
+// ==================================================
+// VARIABLES SASS - NORMAN WINES ELEGANTE Y SUAVE
+// ==================================================
+
+// PALETA ELEGANTE Y SUAVE - Diseño profesional y cómodo
+$primary-wine: #3d1526;             // Vino profundo pero más suave
+$secondary-gold: #c9a961;           // Oro elegante suavizado
+$accent-merlot: #5a1e35;            // Merlot suave
+$accent-dark: #2a1219;              // Oscuro suave con toque vino
+$accent-forest: #1a3d22;            // Verde bosque más suave
+
+// Fondos suaves (tema oscuro cómodo)
+$deep-charcoal: #3a3a3a;           // Carbón menos agresivo
+$warm-charcoal: #454545;           // Carbón cálido suave
+$rich-slate: #505050;              // Pizarra rica más clara
+$dark-coffee: #3d3429;             // Café oscuro suave
+$midnight-blue: #2a2f3e;           // Azul medianoche suave
+
+// Acentos suaves pero legibles
+$soft-gold: #e6c878;               // Oro suave para mejor contraste
+$ivory-luxury: #fdf9f4;            // Marfil más cálido
+$pearl-white: #faf7f2;             // Blanco perla suave
+$warm-cream: #f5f2eb;              // Crema cálida suave
+$rich-copper: #d4a574;             // Cobre más suave
+
+// Colores de estado (suavizados)
+$success-emerald: #4a6b52;         // Esmeralda más suave
+$warning-amber: #d4a574;           // Ámbar suave
+$danger-wine: #8b3d52;             // Vino peligro suave
+$info-steel: #5a6b7d;             // Acero suave
+
+// Variables CSS personalizadas (compatibilidad con Bootstrap)
+:root {
+    --bs-blue: #{$primary-wine};
+    --bs-green: #{$secondary-gold};
+    --bs-primary: #{$primary-wine};
+    --bs-secondary: #{$secondary-gold};
+    --bs-success: #{$success-emerald};
+    --bs-warning: #{$warning-amber};
+    --bs-danger: #{$danger-wine};
+    --bs-info: #{$info-steel};
+}
+
+// Tipografía
+$primary-font: 'Raleway', sans-serif;
+$heading-font: 'Playfair Display', serif;
+
+// Tamaños de fuente base
+$base-font-size: 62.5%; // 1rem = 10px
+$body-font-size: 1.6rem;
+$line-height: 2;
+
+// Tamaños de títulos
+$h1-size-mobile: 3.8rem;
+$h1-size-desktop: 5rem;
+$h2-size-mobile: 3.2rem;
+$h2-size-desktop: 4rem;
+$h3-size-mobile: 2.4rem;
+$h3-size-desktop: 3rem;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 992px;
+$desktop: 1200px;
+
+// Espaciado
+$base-padding: 2rem;
+$section-padding: 5rem;
+
+// Efectos y transiciones (suavizados)
+$transition-duration: 400ms;
+$hover-scale: 1.05; // Menos agresivo
+
+// Dimensiones
+$logo-width: 200px;
+$logo-height: 120px;
+$hero-height-mobile: 25rem;
+$hero-height-desktop: 55rem;
+$product-image-height: 45rem; 

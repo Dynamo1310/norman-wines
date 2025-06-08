@@ -1,0 +1,662 @@
+// ==================================================
+// COMPONENTES ELEGANTES Y SUAVES - NORMAN WINES
+// ==================================================
+
+// Header elegante y consistente en TODAS las páginas
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0; // Padding generoso y consistente
+    background: linear-gradient(135deg, 
+        rgba($primary-wine, 0.95) 0%, 
+        rgba($accent-dark, 0.92) 100%
+    );
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid $secondary-gold;
+    position: relative;
+    
+    // Patrón sutil para elegancia
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(circle at 25% 25%, rgba($secondary-gold, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba($soft-gold, 0.04) 0%, transparent 50%);
+        pointer-events: none;
+    }
+    
+    // Contenido encima del patrón
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+// Logo elegante y consistente
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: $logo-width;
+    height: $logo-height;
+    object-fit: contain;
+    transition: transform $transition-duration ease;
+    filter: drop-shadow(0 4px 12px rgba($secondary-gold, 0.3));
+    
+    &:hover {
+        transform: scale(1.08);
+        filter: drop-shadow(0 6px 20px rgba($secondary-gold, 0.5));
+    }
+}
+
+// Logo móvil - consistente en todas las páginas
+.navbar-brand img {
+    height: $logo-height !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+// Navegación suave y consistente
+.navbar {
+    background-color: transparent;
+    padding: 1.5rem 0; // Padding consistente
+    min-height: 80px; // Altura mínima para consistencia
+    
+    .navbar-nav {
+        a {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 0.8rem 1.5rem;
+            margin: 0 0.3rem;
+            border-radius: 10px;
+            transition: all $transition-duration ease;
+            color: $ivory-luxury;
+            position: relative;
+            background: rgba($rich-slate, 0.2);
+            backdrop-filter: blur(5px);
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: linear-gradient(90deg, $secondary-gold, $soft-gold);
+                transition: all $transition-duration ease;
+                transform: translateX(-50%);
+                border-radius: 1px;
+            }
+            
+            &:hover {
+                background: linear-gradient(135deg, 
+                    rgba($secondary-gold, 0.15) 0%, 
+                    rgba($soft-gold, 0.08) 100%
+                );
+                color: $soft-gold !important;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba($secondary-gold, 0.2);
+                
+                &::after {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+// Contenedor del navbar consistente
+.border-top.py-4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid rgba($secondary-gold, 0.3);
+    min-height: 120px; // Altura mínima para consistencia
+}
+
+
+
+
+
+// Imagen principal elegante y moderna
+.imagen-principal {
+    .overlay-elegante {
+        background: linear-gradient(135deg, 
+            rgba($accent-dark, 0.8) 0%, 
+            rgba($primary-wine, 0.6) 40%,
+            rgba($accent-merlot, 0.4) 80%,
+            rgba($secondary-gold, 0.1) 100%
+        );
+        
+        h2 {
+            color: $soft-gold !important;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7) !important;
+            font-weight: 700 !important;
+        }
+        
+        p {
+            color: $ivory-luxury !important;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+            font-size: 1.8rem !important;
+            font-weight: 500 !important;
+        }
+    }
+}
+
+// Productos con estilo suave
+.producto {
+    @media (min-width: $mobile) {
+        img {
+            height: $product-image-height;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px 0 0 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            filter: brightness(1.05) contrast(1.1);
+        }
+    }
+}
+
+// FIJO PARA EL PRODUCTO MERLOT (.bg-primary) - SIN MOVIMIENTO
+.bg-primary {
+    background: linear-gradient(135deg, 
+        $primary-wine 0%, 
+        $accent-merlot 50%,
+        $accent-dark 100%
+    ) !important;
+    position: relative;
+    
+    // Patrón sutil
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(circle at 30% 70%, rgba($secondary-gold, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 70% 30%, rgba($soft-gold, 0.04) 0%, transparent 50%);
+        pointer-events: none;
+    }
+    
+    // Contenido encima del patrón
+    * {
+        position: relative;
+        z-index: 1;
+    }
+    
+    // Texto con excelente contraste pero más suave
+    h3 {
+        color: $soft-gold !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+        font-weight: 700 !important;
+    }
+    
+    p {
+        color: $ivory-luxury !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+        font-weight: 500 !important;
+        
+        &.fs-1 {
+            color: $soft-gold !important;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6) !important;
+            font-weight: 900 !important;
+        }
+    }
+}
+
+// Cards SUAVES - SIN MOVIMIENTO EXCESIVO (como quiere el usuario)
+.card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    transition: all $transition-duration ease;
+    background: linear-gradient(135deg, 
+        $rich-slate 0%, 
+        $warm-charcoal 100%
+    );
+    position: relative;
+    
+    // Borde suave
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, 
+            rgba($secondary-gold, 0.08) 0%, 
+            transparent 50%,
+            rgba($soft-gold, 0.04) 100%
+        );
+        border-radius: 20px;
+        pointer-events: none;
+    }
+    
+    // HOVER SUAVE - solo sombra y brillo sutil, SIN MOVIMIENTO
+    &:hover {
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+        
+        &::before {
+            background: linear-gradient(135deg, 
+                rgba($secondary-gold, 0.12) 0%, 
+                rgba($soft-gold, 0.06) 50%,
+                rgba($secondary-gold, 0.08) 100%
+            );
+        }
+    }
+    
+    .card-img-top {
+        transition: transform $transition-duration ease;
+        border-radius: 20px 20px 0 0;
+        filter: brightness(1.05) contrast(1.05);
+    }
+    
+    // Imagen SIN ESCALADO AGRESIVO
+    &:hover .card-img-top {
+        transform: scale(1.02); // Muy sutil
+        filter: brightness(1.08) contrast(1.08);
+    }
+    
+    .card-body {
+        background: linear-gradient(135deg, 
+            $primary-wine 0%, 
+            $accent-merlot 50%,
+            $accent-dark 100%
+        );
+        position: relative;
+        
+        // Overlay más suave
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                transparent 0%, 
+                rgba($secondary-gold, 0.06) 30%,
+                rgba($soft-gold, 0.03) 70%,
+                transparent 100%
+            );
+        }
+        
+        * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h3 {
+            color: $soft-gold !important;
+            margin-bottom: 1.5rem;
+            font-size: 2.4rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 600;
+        }
+        
+        p {
+            color: $ivory-luxury !important;
+            font-size: 1.4rem;
+            line-height: 1.7;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            
+            &.fs-1 {
+                color: $soft-gold !important;
+                font-weight: 900;
+                text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+                font-size: 3.2rem;
+            }
+        }
+    }
+}
+
+// Categorías IGUAL COLOR que las cards de productos
+.categoria {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+    transition: all $transition-duration ease;
+    background: linear-gradient(135deg, 
+        $primary-wine 0%, 
+        $accent-merlot 50%,
+        $accent-dark 100%
+    );
+    
+    &:hover {
+        transform: translateY(-5px); // Menos movimiento
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    }
+    
+    img {
+        transition-property: transform, filter;
+        transition-duration: $transition-duration;
+        border-radius: 20px 20px 0 0;
+        filter: brightness(1.05) contrast(1.1);
+    }
+    
+    &:hover img {
+        transform: scale($hover-scale); // Más suave (1.05 en vez de 1.2)
+        filter: brightness(1.1) contrast(1.15);
+    }
+    
+    // MEJOR CONTRASTE en categorías - MISMO ESTILO que cards de productos
+    a {
+        background: linear-gradient(135deg, 
+            $accent-merlot 0%, 
+            $accent-dark 100%
+        );
+        color: $soft-gold; // Mismo estilo que las cards de productos
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-radius: 0 0 20px 20px;
+        transition: all $transition-duration ease;
+        position: relative;
+        overflow: hidden;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); // Más sombra para mejor legibilidad
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba($soft-gold, 0.2), 
+                transparent
+            );
+            transition: left $transition-duration ease;
+        }
+        
+        &:hover {
+            background: linear-gradient(135deg, 
+                $secondary-gold 0%, 
+                $soft-gold 100%
+            );
+            color: $accent-dark;
+            text-decoration: none !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba($secondary-gold, 0.3);
+            
+            &::before {
+                left: 100%;
+            }
+        }
+    }
+}
+
+// Botones suaves
+.btn-success {
+    background: linear-gradient(135deg, 
+        $secondary-gold 0%, 
+        $soft-gold 100%
+    );
+    border: none;
+    color: $accent-dark;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 30px;
+    transition: all $transition-duration ease;
+    box-shadow: 0 4px 15px rgba($secondary-gold, 0.25);
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            transparent, 
+            rgba(255,255,255,0.2), 
+            transparent
+        );
+        transition: left $transition-duration ease;
+    }
+    
+    &:hover {
+        background: linear-gradient(135deg, 
+            $soft-gold 0%, 
+            $rich-copper 100%
+        );
+        transform: translateY(-2px); // Menos movimiento
+        box-shadow: 0 6px 20px rgba($secondary-gold, 0.35);
+        color: $accent-dark;
+        
+        &::before {
+            left: 100%;
+        }
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, 
+        $primary-wine 0%, 
+        $accent-merlot 100%
+    );
+    border: none;
+    color: $soft-gold;
+    border-radius: 30px;
+    transition: all $transition-duration ease;
+    box-shadow: 0 4px 15px rgba($primary-wine, 0.3);
+    font-weight: 600;
+    
+    &:hover {
+        background: linear-gradient(135deg, 
+            $accent-merlot 0%, 
+            $accent-dark 100%
+        );
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba($primary-wine, 0.4);
+        color: $soft-gold;
+    }
+}
+
+// Galería
+.galeria {
+    li:not(:last-of-type) {
+        margin-bottom: 1rem;
+    }
+}
+
+// Formularios MUY LEGIBLES
+.form-control {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border: 2px solid $secondary-gold;
+    border-radius: 12px;
+    transition: all $transition-duration ease;
+    background: linear-gradient(135deg, 
+        rgba($pearl-white, 0.95) 0%, 
+        rgba($warm-cream, 0.9) 100%
+    );
+    color: $accent-dark !important; // Texto muy oscuro para contraste
+    backdrop-filter: blur(3px);
+    
+    &:focus {
+        border-color: $soft-gold;
+        box-shadow: 0 0 0 0.2rem rgba($secondary-gold, 0.3);
+        background: rgba($pearl-white, 0.98);
+        outline: none;
+        color: $accent-dark !important;
+    }
+    
+    &::placeholder {
+        color: rgba($accent-dark, 0.6) !important; // Placeholder muy legible
+    }
+}
+
+// Labels del formulario MUY LEGIBLES
+.form-label {
+    color: $pearl-white !important;
+    font-weight: 600 !important;
+    font-size: 1.4rem !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    margin-bottom: 0.8rem !important;
+}
+
+// Footer con CONTRASTE PERFECTO
+footer {
+    background: linear-gradient(135deg, 
+        $accent-dark 0%, 
+        $primary-wine 30%,
+        $accent-merlot 70%,
+        $midnight-blue 100%
+    );
+    color: $ivory-luxury;
+    position: relative;
+    
+    // Patrón más suave
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(circle at 20% 80%, rgba($secondary-gold, 0.04) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba($soft-gold, 0.03) 0%, transparent 50%);
+    }
+    
+    * {
+        position: relative;
+        z-index: 1;
+    }
+    
+    h3 {
+        color: $soft-gold; // Mejor contraste
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+        font-weight: 600;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    
+    // OVERRIDE ESPECÍFICO para enlaces .text-dark en footer
+    a,
+    a.text-dark {
+        color: $pearl-white !important; // ¡FUERZA el color claro!
+        transition: all $transition-duration ease;
+        position: relative;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+        font-weight: 500;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, $secondary-gold, $soft-gold);
+            transition: width $transition-duration ease;
+        }
+        
+        &:hover {
+            color: $soft-gold !important; // ¡FUERZA el hover dorado!
+            text-decoration: none;
+            transform: translateX(3px);
+            text-shadow: 0 0 8px rgba($soft-gold, 0.4) !important;
+            
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+    
+    // Párrafos con excelente contraste
+    p {
+        color: rgba($pearl-white, 0.9) !important; // Mejor contraste
+        font-weight: 400;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        font-size: 1.6rem;
+    }
+}
+
+// Radio buttons MUY VISIBLES para formulario de contacto
+.form-check-input[type="radio"] {
+    width: 2rem !important;
+    height: 2rem !important;
+    border: 3px solid $secondary-gold !important;
+    background-color: rgba($pearl-white, 0.9) !important;
+    border-radius: 50% !important;
+    transition: all $transition-duration ease !important;
+    
+    &:checked {
+        background-color: $soft-gold !important;
+        border-color: $secondary-gold !important;
+        box-shadow: 0 0 0 0.3rem rgba($secondary-gold, 0.3) !important;
+    }
+    
+    &:focus {
+        border-color: $soft-gold !important;
+        box-shadow: 0 0 0 0.2rem rgba($secondary-gold, 0.2) !important;
+    }
+}
+
+// Contenedores específicos para radio buttons en fieldset de información extra
+fieldset:last-of-type .mb-3 {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    padding: 1.2rem !important;
+    background: linear-gradient(135deg, 
+        rgba($rich-slate, 0.4) 0%, 
+        rgba($warm-charcoal, 0.3) 100%
+    ) !important;
+    border-radius: 12px !important;
+    border: 2px solid rgba($secondary-gold, 0.3) !important;
+    transition: all $transition-duration ease !important;
+    
+    &:hover {
+        border-color: rgba($soft-gold, 0.5) !important;
+        background: linear-gradient(135deg, 
+            rgba($rich-slate, 0.5) 0%, 
+            rgba($warm-charcoal, 0.4) 100%
+        ) !important;
+    }
+    
+    .form-label {
+        margin-bottom: 0 !important;
+        cursor: pointer !important;
+        flex: 1 !important;
+        font-size: 1.6rem !important;
+        font-weight: 600 !important;
+    }
+}
+
+// Mejorar contraste en páginas principales
+main {
+    // Párrafos principales MUY LEGIBLES
+    p {
+        color: $pearl-white !important;
+        font-size: 1.6rem !important;
+        line-height: 1.8 !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+        font-weight: 400 !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    // Títulos principales perfectamente contrastados
+    h1, h2, h3 {
+        color: $soft-gold !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+}
+
+ 

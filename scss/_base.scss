@@ -1,0 +1,108 @@
+// ==================================================
+// ESTILOS BASE - NORMAN WINES ELEGANTE Y SUAVE
+// ==================================================
+
+// Configuración HTML base
+html {
+    font-size: $base-font-size; /* 1 rem = 10px */
+}
+
+// Configuración del body con fondo suave (tema oscuro cómodo)
+body {
+    font-family: $primary-font;
+    font-size: $body-font-size;
+    line-height: $line-height;
+    background: linear-gradient(135deg, 
+        $deep-charcoal 0%, 
+        $warm-charcoal 30%,
+        $dark-coffee 70%,
+        $midnight-blue 100%
+    );
+    background-attachment: fixed;
+    color: $ivory-luxury;
+    min-height: 100vh;
+    // Patrón sutil para textura
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(201, 169, 97, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(61, 21, 38, 0.06) 0%, transparent 50%);
+}
+
+// Tipografía con contrastes suaves pero legibles
+h1, h2, h3 {
+    font-family: $heading-font;
+    color: $secondary-gold;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: $h1-size-mobile;
+    color: $soft-gold;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    
+    @media (min-width: $mobile) {
+        font-size: $h1-size-desktop;
+    }
+}
+
+h2 {
+    font-size: $h2-size-mobile;
+    color: $secondary-gold;
+    
+    @media (min-width: $mobile) {
+        font-size: $h2-size-desktop;
+    }
+}
+
+h3 {
+    font-size: $h3-size-mobile;
+    color: $soft-gold;
+    
+    @media (min-width: $mobile) {
+        font-size: $h3-size-desktop;
+    }
+}
+
+// Enlaces con contraste suave
+a {
+    color: $secondary-gold;
+    transition: color $transition-duration ease;
+    
+    &:hover {
+        color: $soft-gold;
+        text-decoration: none;
+        text-shadow: 0 0 6px rgba($soft-gold, 0.4);
+    }
+}
+
+// Párrafos con excelente legibilidad
+p {
+    margin-bottom: 1.5rem;
+    color: $warm-cream;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+// Contenedores y secciones
+section {
+    padding: $section-padding 0;
+    position: relative;
+}
+
+// Efecto de separación sutil - SOLO para secciones que NO sean imagen-principal
+section:not(:first-child):not(.imagen-principal)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        $secondary-gold 50%, 
+        transparent 100%
+    );
+    transform: translateX(-50%);
+    opacity: 0.6;
+} 
