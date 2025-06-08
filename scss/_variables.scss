@@ -3,77 +3,77 @@
 // ==================================================
 
 // PALETA ELEGANTE Y SUAVE - Diseño profesional y cómodo
-$primary-wine: #3d1526;             // Vino profundo pero más suave
-$secondary-gold: #c9a961;           // Oro elegante suavizado
-$accent-merlot: #5a1e35;            // Merlot suave
-$accent-dark: #2a1219;              // Oscuro suave con toque vino
-$accent-forest: #1a3d22;            // Verde bosque más suave
+$vino-primario: #3d1526;             // Vino profundo elegante
+$oro-secundario: #c9a961;           // Oro refinado
+$acento-merlot: #5a1e35;            // Merlot suave
+$acento-oscuro: #2a1219;            // Oscuro con toque vino
+$acento-bosque: #1a3d22;            // Verde bosque suave
 
 // Fondos suaves (tema oscuro cómodo)
-$deep-charcoal: #3a3a3a;           // Carbón menos agresivo
-$warm-charcoal: #454545;           // Carbón cálido suave
-$rich-slate: #505050;              // Pizarra rica más clara
-$dark-coffee: #3d3429;             // Café oscuro suave
-$midnight-blue: #2a2f3e;           // Azul medianoche suave
+$carbon-profundo: #3a3a3a;           // Carbón cómodo
+$carbon-calido: #454545;            // Carbón cálido
+$pizarra-rica: #505050;              // Pizarra clara
+$cafe-oscuro: #3d3429;              // Café suave
+$azul-medianoche: #2a2f3e;          // Azul medianoche
 
 // Acentos suaves pero legibles
-$soft-gold: #e6c878;               // Oro suave para mejor contraste
-$ivory-luxury: #fdf9f4;            // Marfil más cálido
-$pearl-white: #faf7f2;             // Blanco perla suave
-$warm-cream: #f5f2eb;              // Crema cálida suave
-$rich-copper: #d4a574;             // Cobre más suave
+$oro-suave: #e6c878;                // Oro claro para contraste
+$marfil-lujo: #fdf9f4;              // Marfil cálido
+$blanco-perla: #faf7f2;             // Blanco perla
+$crema-calido: #f5f2eb;              // Crema cálida
+$cobre-rico: #d4a574;               // Cobre suave
 
 // Colores de estado (suavizados)
-$success-emerald: #4a6b52;         // Esmeralda más suave
-$warning-amber: #d4a574;           // Ámbar suave
-$danger-wine: #8b3d52;             // Vino peligro suave
-$info-steel: #5a6b7d;             // Acero suave
+$exito-esmeralda: #4a6b52;          // Esmeralda suave
+$advertencia-ambar: #d4a574;        // Ámbar suave
+$peligro-vino: #8b3d52;             // Vino peligro
+$info-acero: #5a6b7d;              // Acero suave
 
 // Variables CSS personalizadas (compatibilidad con Bootstrap)
 :root {
-    --bs-blue: #{$primary-wine};
-    --bs-green: #{$secondary-gold};
-    --bs-primary: #{$primary-wine};
-    --bs-secondary: #{$secondary-gold};
-    --bs-success: #{$success-emerald};
-    --bs-warning: #{$warning-amber};
-    --bs-danger: #{$danger-wine};
-    --bs-info: #{$info-steel};
+    --bs-blue: #{$vino-primario};
+    --bs-green: #{$oro-secundario};
+    --bs-primary: #{$vino-primario};
+    --bs-secondary: #{$oro-secundario};
+    --bs-success: #{$exito-esmeralda};
+    --bs-warning: #{$advertencia-ambar};
+    --bs-danger: #{$peligro-vino};
+    --bs-info: #{$info-acero};
 }
 
 // Tipografía
-$primary-font: 'Raleway', sans-serif;
-$heading-font: 'Playfair Display', serif;
+$fuente-primaria: 'Raleway', sans-serif;
+$fuente-titulos: 'Playfair Display', serif;
 
 // Tamaños de fuente base
-$base-font-size: 62.5%; // 1rem = 10px
-$body-font-size: 1.6rem;
-$line-height: 2;
+$tamano-base: 62.5%;                // 1rem = 10px
+$tamano-cuerpo: 1.6rem;
+$altura-linea: 2;
 
 // Tamaños de títulos
-$h1-size-mobile: 3.8rem;
-$h1-size-desktop: 5rem;
-$h2-size-mobile: 3.2rem;
-$h2-size-desktop: 4rem;
-$h3-size-mobile: 2.4rem;
-$h3-size-desktop: 3rem;
+$h1-movil: 3.8rem;
+$h1-escritorio: 5rem;
+$h2-movil: 3.2rem;
+$h2-escritorio: 4rem;
+$h3-movil: 2.4rem;
+$h3-escritorio: 3rem;
 
 // Breakpoints
-$mobile: 768px;
+$movil: 768px;
 $tablet: 992px;
-$desktop: 1200px;
+$escritorio: 1200px;
 
 // Espaciado
-$base-padding: 2rem;
-$section-padding: 5rem;
+$relleno-base: 2rem;
+$relleno-seccion: 5rem;
 
 // Efectos y transiciones (suavizados)
-$transition-duration: 400ms;
-$hover-scale: 1.05; // Menos agresivo
+$duracion-transicion: 400ms;
+$escala-hover: 1.05; // Menos agresivo
 
 // Dimensiones
-$logo-width: 200px;
-$logo-height: 120px;
-$hero-height-mobile: 25rem;
-$hero-height-desktop: 55rem;
-$product-image-height: 45rem; 
+$ancho-logo: 200px;
+$alto-logo: 120px;
+$alto-hero-movil: 25rem;
+$alto-hero-escritorio: 55rem;
+$alto-imagen-producto: 45rem; 

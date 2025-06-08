@@ -2,24 +2,24 @@
 // ESTILOS BASE - NORMAN WINES ELEGANTE Y SUAVE
 // ==================================================
 
-// Configuración HTML base
+// Estilos base - Norman Wines
+
 html {
-    font-size: $base-font-size; /* 1 rem = 10px */
+    font-size: $tamano-base; /* 1 rem = 10px */
 }
 
-// Configuración del body con fondo suave (tema oscuro cómodo)
 body {
-    font-family: $primary-font;
-    font-size: $body-font-size;
-    line-height: $line-height;
+    font-family: $fuente-primaria;
+    font-size: $tamano-cuerpo;
+    line-height: $altura-linea;
     background: linear-gradient(135deg, 
-        $deep-charcoal 0%, 
-        $warm-charcoal 30%,
-        $dark-coffee 70%,
-        $midnight-blue 100%
+        $carbon-profundo 0%, 
+        $carbon-calido 30%,
+        $cafe-oscuro 70%,
+        $azul-medianoche 100%
     );
     background-attachment: fixed;
-    color: $ivory-luxury;
+    color: $marfil-lujo;
     min-height: 100vh;
     // Patrón sutil para textura
     background-image: 
@@ -29,64 +29,64 @@ body {
 
 // Tipografía con contrastes suaves pero legibles
 h1, h2, h3 {
-    font-family: $heading-font;
-    color: $secondary-gold;
+    font-family: $fuente-titulos;
+    color: $oro-secundario;
     margin-bottom: 1.5rem;
     font-weight: 700;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
-    font-size: $h1-size-mobile;
-    color: $soft-gold;
+    font-size: $h1-movil;
+    color: $oro-suave;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     
-    @media (min-width: $mobile) {
-        font-size: $h1-size-desktop;
+    @media (min-width: $movil) {
+        font-size: $h1-escritorio;
     }
 }
 
 h2 {
-    font-size: $h2-size-mobile;
-    color: $secondary-gold;
+    font-size: $h2-movil;
+    color: $oro-secundario;
     
-    @media (min-width: $mobile) {
-        font-size: $h2-size-desktop;
+    @media (min-width: $movil) {
+        font-size: $h2-escritorio;
     }
 }
 
 h3 {
-    font-size: $h3-size-mobile;
-    color: $soft-gold;
+    font-size: $h3-movil;
+    color: $oro-suave;
     
-    @media (min-width: $mobile) {
-        font-size: $h3-size-desktop;
+    @media (min-width: $movil) {
+        font-size: $h3-escritorio;
     }
 }
 
 // Enlaces con contraste suave
 a {
-    color: $secondary-gold;
-    transition: color $transition-duration ease;
+    color: $oro-secundario;
+    transition: color $duracion-transicion ease;
     
     &:hover {
-        color: $soft-gold;
+        color: $oro-suave;
         text-decoration: none;
-        text-shadow: 0 0 6px rgba($soft-gold, 0.4);
+        text-shadow: 0 0 6px rgba($oro-suave, 0.4);
     }
 }
 
 // Párrafos con excelente legibilidad
 p {
     margin-bottom: 1.5rem;
-    color: $warm-cream;
+    color: $crema-calido;
     font-weight: 400;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 // Contenedores y secciones
 section {
-    padding: $section-padding 0;
+    padding: $relleno-seccion 0;
     position: relative;
 }
 
@@ -100,7 +100,7 @@ section:not(:first-child):not(.imagen-principal)::before {
     height: 1px;
     background: linear-gradient(90deg, 
         transparent 0%, 
-        $secondary-gold 50%, 
+        $oro-secundario 50%, 
         transparent 100%
     );
     transform: translateX(-50%);

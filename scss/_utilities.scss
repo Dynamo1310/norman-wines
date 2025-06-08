@@ -2,34 +2,36 @@
 // UTILIDADES ELEGANTES Y SUAVES - NORMAN WINES
 // ==================================================
 
-// Sobreescrituras de colores de Bootstrap
+// Utilidades elegantes - Norman Wines
+
+// Sobreescrituras de Bootstrap
 .text-primary,
 .nombre-sitio {
-    color: $secondary-gold !important;
+    color: $oro-secundario !important;
 }
 
 .bg-primary {
     background: linear-gradient(135deg, 
-        $primary-wine 0%, 
-        $accent-merlot 50%,
-        $accent-dark 100%
+        $vino-primario 0%, 
+        $acento-merlot 50%,
+        $acento-oscuro 100%
     ) !important;
 }
 
 .text-white {
-    color: $ivory-luxury !important;
+    color: $marfil-lujo !important;
 }
 
 // Bordes suaves
 .border-top {
-    border-top: 2px solid $rich-slate !important;
+    border-top: 2px solid $pizarra-rica !important;
     
     &.border-gold {
-        border-top: 2px solid $secondary-gold !important;
+        border-top: 2px solid $oro-secundario !important;
     }
     
     &.border-soft {
-        border-top: 1px solid $soft-gold !important;
+        border-top: 1px solid $oro-suave !important;
     }
 }
 
@@ -49,77 +51,77 @@
     padding-bottom: 2rem !important;
 }
 
-// Contenedores con fondo suave
+// Fondos temáticos
 .bg-wine {
-    background: linear-gradient(135deg, $primary-wine 0%, $accent-merlot 100%);
-    color: $ivory-luxury;
+    background: linear-gradient(135deg, $vino-primario 0%, $acento-merlot 100%);
+    color: $marfil-lujo;
 }
 
 .bg-wine-soft {
-    background: linear-gradient(135deg, $accent-dark 0%, $primary-wine 100%);
-    color: $ivory-luxury;
+    background: linear-gradient(135deg, $acento-oscuro 0%, $vino-primario 100%);
+    color: $marfil-lujo;
 }
 
 .bg-charcoal {
-    background: linear-gradient(135deg, $deep-charcoal 0%, $warm-charcoal 100%);
-    color: $ivory-luxury;
+    background: linear-gradient(135deg, $carbon-profundo 0%, $carbon-calido 100%);
+    color: $marfil-lujo;
 }
 
 .bg-charcoal-soft {
-    background: linear-gradient(135deg, $warm-charcoal 0%, $rich-slate 100%);
-    color: $ivory-luxury;
+    background: linear-gradient(135deg, $carbon-calido 0%, $pizarra-rica 100%);
+    color: $marfil-lujo;
 }
 
 .bg-gold-soft {
-    background: linear-gradient(135deg, $secondary-gold 0%, $soft-gold 100%);
-    color: $accent-dark;
+    background: linear-gradient(135deg, $oro-secundario 0%, $oro-suave 100%);
+    color: $acento-oscuro;
 }
 
 .bg-midnight-soft {
-    background: linear-gradient(135deg, $midnight-blue 0%, $accent-dark 100%);
-    color: $ivory-luxury;
+    background: linear-gradient(135deg, $azul-medianoche 0%, $acento-oscuro 100%);
+    color: $marfil-lujo;
 }
 
-// Efectos de texto suaves
+// Colores de texto
 .text-gold {
-    color: $secondary-gold !important;
+    color: $oro-secundario !important;
 }
 
 .text-soft-gold {
-    color: $soft-gold !important;
+    color: $oro-suave !important;
 }
 
 .text-wine {
-    color: $primary-wine !important;
+    color: $vino-primario !important;
 }
 
 .text-merlot {
-    color: $accent-merlot !important;
+    color: $acento-merlot !important;
 }
 
 .text-dark-soft {
-    color: $accent-dark !important;
+    color: $acento-oscuro !important;
 }
 
 .text-ivory {
-    color: $ivory-luxury !important;
+    color: $marfil-lujo !important;
 }
 
 .text-cream {
-    color: $warm-cream !important;
+    color: $crema-calido !important;
 }
 
 .text-copper-soft {
-    color: $rich-copper !important;
+    color: $cobre-rico !important;
 }
 
-// Sombras de texto suaves
+// Sombras de texto
 .text-soft-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .text-gold-soft-shadow {
-    text-shadow: 0 2px 4px rgba($secondary-gold, 0.3);
+    text-shadow: 0 2px 4px rgba($oro-secundario, 0.3);
 }
 
 .text-gentle-shadow {
@@ -167,10 +169,10 @@
 
 @keyframes glowSoft {
     from {
-        box-shadow: 0 0 8px rgba($secondary-gold, 0.2);
+        box-shadow: 0 0 8px rgba($oro-secundario, 0.2);
     }
     to {
-        box-shadow: 0 0 15px rgba($soft-gold, 0.4);
+        box-shadow: 0 0 15px rgba($oro-suave, 0.4);
     }
 }
 
@@ -199,9 +201,9 @@
         right: 0;
         bottom: 0;
         background: linear-gradient(135deg, 
-            rgba($accent-dark, 0.6) 0%, 
-            rgba($primary-wine, 0.4) 50%,
-            rgba($accent-merlot, 0.3) 100%
+            rgba($acento-oscuro, 0.6) 0%, 
+            rgba($vino-primario, 0.4) 50%,
+            rgba($acento-merlot, 0.3) 100%
         );
         z-index: 1;
     }
@@ -223,9 +225,9 @@
         right: 0;
         bottom: 0;
         background: linear-gradient(135deg, 
-            rgba($secondary-gold, 0.2) 0%, 
-            rgba($soft-gold, 0.1) 50%,
-            rgba($rich-copper, 0.08) 100%
+            rgba($oro-secundario, 0.2) 0%, 
+            rgba($oro-suave, 0.1) 50%,
+            rgba($cobre-rico, 0.08) 100%
         );
         z-index: 1;
     }
@@ -247,8 +249,8 @@
         right: 0;
         bottom: 0;
         background: linear-gradient(135deg, 
-            rgba($deep-charcoal, 0.7) 0%, 
-            rgba($warm-charcoal, 0.5) 100%
+            rgba($carbon-profundo, 0.7) 0%, 
+            rgba($carbon-calido, 0.5) 100%
         );
         backdrop-filter: blur(1px);
         z-index: 1;
@@ -260,9 +262,9 @@
     }
 }
 
-// Efectos de hover suaves
+// Efectos hover suaves
 .hover-lift-soft {
-    transition: all $transition-duration ease;
+    transition: all $duracion-transicion ease;
     
     &:hover {
         transform: translateY(-3px);
@@ -271,10 +273,10 @@
 }
 
 .hover-glow-soft {
-    transition: all $transition-duration ease;
+    transition: all $duracion-transicion ease;
     
     &:hover {
-        box-shadow: 0 0 20px rgba($secondary-gold, 0.3);
+        box-shadow: 0 0 20px rgba($oro-secundario, 0.3);
         filter: brightness(1.05);
     }
 }
@@ -292,10 +294,10 @@
         height: 100%;
         background: linear-gradient(90deg, 
             transparent, 
-            rgba($soft-gold, 0.2), 
+            rgba($oro-suave, 0.2), 
             transparent
         );
-        transition: left $transition-duration ease;
+        transition: left $duracion-transicion ease;
     }
     
     &:hover::before {
@@ -303,14 +305,14 @@
     }
 }
 
-// Separadores suaves
+// Separadores
 .divider-gold-soft {
     height: 2px;
     background: linear-gradient(90deg, 
         transparent 0%, 
-        $secondary-gold 30%,
-        $soft-gold 50%,
-        $secondary-gold 70%,
+        $oro-secundario 30%,
+        $oro-suave 50%,
+        $oro-secundario 70%,
         transparent 100%
     );
     border: none;
@@ -323,9 +325,9 @@
     height: 1px;
     background: linear-gradient(90deg, 
         transparent 0%, 
-        $primary-wine 30%,
-        $accent-merlot 50%,
-        $primary-wine 70%,
+        $vino-primario 30%,
+        $acento-merlot 50%,
+        $vino-primario 70%,
         transparent 100%
     );
     border: none;
@@ -337,7 +339,7 @@
     height: 1px;
     background: linear-gradient(90deg, 
         transparent 0%, 
-        $rich-slate 50%,
+        $pizarra-rica 50%,
         transparent 100%
     );
     border: none;
@@ -345,64 +347,64 @@
     opacity: 0.5;
 }
 
-// Cards y contenedores suaves
+// Cards y contenedores
 .card-soft-luxury {
     background: linear-gradient(135deg, 
-        rgba($rich-slate, 0.8) 0%, 
-        rgba($warm-charcoal, 0.7) 100%
+        rgba($pizarra-rica, 0.8) 0%, 
+        rgba($carbon-calido, 0.7) 100%
     );
-    border: 1px solid rgba($secondary-gold, 0.15);
+    border: 1px solid rgba($oro-secundario, 0.15);
     border-radius: 15px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    transition: all $transition-duration ease;
+    transition: all $duracion-transicion ease;
     
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
-        border-color: rgba($soft-gold, 0.25);
+        border-color: rgba($oro-suave, 0.25);
     }
 }
 
 .glass-soft {
-    background: rgba($rich-slate, 0.08);
+    background: rgba($pizarra-rica, 0.08);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba($secondary-gold, 0.15);
+    border: 1px solid rgba($oro-secundario, 0.15);
     border-radius: 12px;
 }
 
-// Badges suaves
+// Badges
 .badge-wine-soft {
-    background: linear-gradient(135deg, $primary-wine 0%, $accent-merlot 100%);
-    color: $soft-gold;
+    background: linear-gradient(135deg, $vino-primario 0%, $acento-merlot 100%);
+    color: $oro-suave;
     border-radius: 20px;
     padding: 0.6rem 1.2rem;
     font-weight: 600;
     letter-spacing: 0.8px;
     text-transform: uppercase;
-    box-shadow: 0 2px 10px rgba($primary-wine, 0.3);
-    border: 1px solid rgba($secondary-gold, 0.2);
+    box-shadow: 0 2px 10px rgba($vino-primario, 0.3);
+    border: 1px solid rgba($oro-secundario, 0.2);
 }
 
 .badge-gold-soft {
-    background: linear-gradient(135deg, $secondary-gold 0%, $soft-gold 100%);
-    color: $accent-dark;
+    background: linear-gradient(135deg, $oro-secundario 0%, $oro-suave 100%);
+    color: $acento-oscuro;
     border-radius: 20px;
     padding: 0.6rem 1.2rem;
     font-weight: 600;
     letter-spacing: 0.8px;
     text-transform: uppercase;
-    box-shadow: 0 2px 10px rgba($secondary-gold, 0.3);
+    box-shadow: 0 2px 10px rgba($oro-secundario, 0.3);
 }
 
 .badge-charcoal-soft {
-    background: linear-gradient(135deg, $deep-charcoal 0%, $rich-slate 100%);
-    color: $ivory-luxury;
+    background: linear-gradient(135deg, $carbon-profundo 0%, $pizarra-rica 100%);
+    color: $marfil-lujo;
     border-radius: 20px;
     padding: 0.6rem 1.2rem;
     font-weight: 600;
     letter-spacing: 0.8px;
     text-transform: uppercase;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba($secondary-gold, 0.15);
+    border: 1px solid rgba($oro-secundario, 0.15);
 } 

@@ -9,12 +9,12 @@
     align-items: center;
     padding: 4rem 0; // Padding generoso y consistente
     background: linear-gradient(135deg, 
-        rgba($primary-wine, 0.95) 0%, 
-        rgba($accent-dark, 0.92) 100%
+        rgba($vino-primario, 0.95) 0%, 
+        rgba($acento-oscuro, 0.92) 100%
     );
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    border-bottom: 2px solid $secondary-gold;
+    border-bottom: 2px solid $oro-secundario;
     position: relative;
     
     // Patrón sutil para elegancia
@@ -26,8 +26,8 @@
         right: 0;
         bottom: 0;
         background-image: 
-            radial-gradient(circle at 25% 25%, rgba($secondary-gold, 0.06) 0%, transparent 50%),
-            radial-gradient(circle at 75% 75%, rgba($soft-gold, 0.04) 0%, transparent 50%);
+            radial-gradient(circle at 25% 25%, rgba($oro-secundario, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba($oro-suave, 0.04) 0%, transparent 50%);
         pointer-events: none;
     }
     
@@ -42,21 +42,21 @@
 .logo {
     display: block;
     margin: 0 auto;
-    width: $logo-width;
-    height: $logo-height;
+    width: $ancho-logo;
+    height: $alto-logo;
     object-fit: contain;
-    transition: transform $transition-duration ease;
-    filter: drop-shadow(0 4px 12px rgba($secondary-gold, 0.3));
+    transition: transform $duracion-transicion ease;
+    filter: drop-shadow(0 4px 12px rgba($oro-secundario, 0.3));
     
     &:hover {
         transform: scale(1.08);
-        filter: drop-shadow(0 6px 20px rgba($secondary-gold, 0.5));
+        filter: drop-shadow(0 6px 20px rgba($oro-secundario, 0.5));
     }
 }
 
 // Logo móvil - consistente en todas las páginas
 .navbar-brand img {
-    height: $logo-height !important;
+    height: $alto-logo !important;
     width: auto !important;
     object-fit: contain !important;
 }
@@ -75,10 +75,10 @@
             padding: 0.8rem 1.5rem;
             margin: 0 0.3rem;
             border-radius: 10px;
-            transition: all $transition-duration ease;
-            color: $ivory-luxury;
+            transition: all $duracion-transicion ease;
+            color: $marfil-lujo;
             position: relative;
-            background: rgba($rich-slate, 0.2);
+            background: rgba($pizarra-rica, 0.2);
             backdrop-filter: blur(5px);
             
             &::after {
@@ -88,20 +88,20 @@
                 left: 50%;
                 width: 0;
                 height: 2px;
-                background: linear-gradient(90deg, $secondary-gold, $soft-gold);
-                transition: all $transition-duration ease;
+                background: linear-gradient(90deg, $oro-secundario, $oro-suave);
+                transition: all $duracion-transicion ease;
                 transform: translateX(-50%);
                 border-radius: 1px;
             }
             
             &:hover {
                 background: linear-gradient(135deg, 
-                    rgba($secondary-gold, 0.15) 0%, 
-                    rgba($soft-gold, 0.08) 100%
+                    rgba($oro-secundario, 0.15) 0%, 
+                    rgba($oro-suave, 0.08) 100%
                 );
-                color: $soft-gold !important;
+                color: $oro-suave !important;
                 transform: translateY(-2px);
-                box-shadow: 0 4px 15px rgba($secondary-gold, 0.2);
+                box-shadow: 0 4px 15px rgba($oro-secundario, 0.2);
                 
                 &::after {
                     width: 80%;
@@ -115,32 +115,28 @@
 .border-top.py-4 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    border-top: 1px solid rgba($secondary-gold, 0.3);
+    border-top: 1px solid rgba($oro-secundario, 0.3);
     min-height: 120px; // Altura mínima para consistencia
 }
-
-
-
-
 
 // Imagen principal elegante y moderna
 .imagen-principal {
     .overlay-elegante {
         background: linear-gradient(135deg, 
-            rgba($accent-dark, 0.8) 0%, 
-            rgba($primary-wine, 0.6) 40%,
-            rgba($accent-merlot, 0.4) 80%,
-            rgba($secondary-gold, 0.1) 100%
+            rgba($acento-oscuro, 0.8) 0%, 
+            rgba($vino-primario, 0.6) 40%,
+            rgba($acento-merlot, 0.4) 80%,
+            rgba($oro-secundario, 0.1) 100%
         );
         
         h2 {
-            color: $soft-gold !important;
+            color: $oro-suave !important;
             text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7) !important;
             font-weight: 700 !important;
         }
         
         p {
-            color: $ivory-luxury !important;
+            color: $marfil-lujo !important;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
             font-size: 1.8rem !important;
             font-weight: 500 !important;
@@ -150,9 +146,9 @@
 
 // Productos con estilo suave
 .producto {
-    @media (min-width: $mobile) {
+    @media (min-width: $movil) {
         img {
-            height: $product-image-height;
+            height: $alto-imagen-producto;
             width: 100%;
             object-fit: cover;
             border-radius: 12px 0 0 12px;
@@ -165,9 +161,9 @@
 // FIJO PARA EL PRODUCTO MERLOT (.bg-primary) - SIN MOVIMIENTO
 .bg-primary {
     background: linear-gradient(135deg, 
-        $primary-wine 0%, 
-        $accent-merlot 50%,
-        $accent-dark 100%
+        $vino-primario 0%, 
+        $acento-merlot 50%,
+        $acento-oscuro 100%
     ) !important;
     position: relative;
     
@@ -180,8 +176,8 @@
         right: 0;
         bottom: 0;
         background-image: 
-            radial-gradient(circle at 30% 70%, rgba($secondary-gold, 0.06) 0%, transparent 50%),
-            radial-gradient(circle at 70% 30%, rgba($soft-gold, 0.04) 0%, transparent 50%);
+            radial-gradient(circle at 30% 70%, rgba($oro-secundario, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 70% 30%, rgba($oro-suave, 0.04) 0%, transparent 50%);
         pointer-events: none;
     }
     
@@ -193,18 +189,18 @@
     
     // Texto con excelente contraste pero más suave
     h3 {
-        color: $soft-gold !important;
+        color: $oro-suave !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
         font-weight: 700 !important;
     }
     
     p {
-        color: $ivory-luxury !important;
+        color: $marfil-lujo !important;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
         font-weight: 500 !important;
         
         &.fs-1 {
-            color: $soft-gold !important;
+            color: $oro-suave !important;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6) !important;
             font-weight: 900 !important;
         }
@@ -217,10 +213,10 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-    transition: all $transition-duration ease;
+    transition: all $duracion-transicion ease;
     background: linear-gradient(135deg, 
-        $rich-slate 0%, 
-        $warm-charcoal 100%
+        $pizarra-rica 0%, 
+        $carbon-calido 100%
     );
     position: relative;
     
@@ -233,9 +229,9 @@
         right: 0;
         bottom: 0;
         background: linear-gradient(135deg, 
-            rgba($secondary-gold, 0.08) 0%, 
+            rgba($oro-secundario, 0.08) 0%, 
             transparent 50%,
-            rgba($soft-gold, 0.04) 100%
+            rgba($oro-suave, 0.04) 100%
         );
         border-radius: 20px;
         pointer-events: none;
@@ -247,15 +243,15 @@
         
         &::before {
             background: linear-gradient(135deg, 
-                rgba($secondary-gold, 0.12) 0%, 
-                rgba($soft-gold, 0.06) 50%,
-                rgba($secondary-gold, 0.08) 100%
+                rgba($oro-secundario, 0.12) 0%, 
+                rgba($oro-suave, 0.06) 50%,
+                rgba($oro-secundario, 0.08) 100%
             );
         }
     }
     
     .card-img-top {
-        transition: transform $transition-duration ease;
+        transition: transform $duracion-transicion ease;
         border-radius: 20px 20px 0 0;
         filter: brightness(1.05) contrast(1.05);
     }
@@ -268,9 +264,9 @@
     
     .card-body {
         background: linear-gradient(135deg, 
-            $primary-wine 0%, 
-            $accent-merlot 50%,
-            $accent-dark 100%
+            $vino-primario 0%, 
+            $acento-merlot 50%,
+            $acento-oscuro 100%
         );
         position: relative;
         
@@ -284,8 +280,8 @@
             bottom: 0;
             background: linear-gradient(45deg, 
                 transparent 0%, 
-                rgba($secondary-gold, 0.06) 30%,
-                rgba($soft-gold, 0.03) 70%,
+                rgba($oro-secundario, 0.06) 30%,
+                rgba($oro-suave, 0.03) 70%,
                 transparent 100%
             );
         }
@@ -296,7 +292,7 @@
         }
         
         h3 {
-            color: $soft-gold !important;
+            color: $oro-suave !important;
             margin-bottom: 1.5rem;
             font-size: 2.4rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -304,13 +300,13 @@
         }
         
         p {
-            color: $ivory-luxury !important;
+            color: $marfil-lujo !important;
             font-size: 1.4rem;
             line-height: 1.7;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
             
             &.fs-1 {
-                color: $soft-gold !important;
+                color: $oro-suave !important;
                 font-weight: 900;
                 text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
                 font-size: 3.2rem;
@@ -325,11 +321,11 @@
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
-    transition: all $transition-duration ease;
+    transition: all $duracion-transicion ease;
     background: linear-gradient(135deg, 
-        $primary-wine 0%, 
-        $accent-merlot 50%,
-        $accent-dark 100%
+        $vino-primario 0%, 
+        $acento-merlot 50%,
+        $acento-oscuro 100%
     );
     
     &:hover {
@@ -339,28 +335,28 @@
     
     img {
         transition-property: transform, filter;
-        transition-duration: $transition-duration;
+        transition-duration: $duracion-transicion;
         border-radius: 20px 20px 0 0;
         filter: brightness(1.05) contrast(1.1);
     }
     
     &:hover img {
-        transform: scale($hover-scale); // Más suave (1.05 en vez de 1.2)
+        transform: scale($escala-hover); // Más suave (1.05 en vez de 1.2)
         filter: brightness(1.1) contrast(1.15);
     }
     
     // MEJOR CONTRASTE en categorías - MISMO ESTILO que cards de productos
     a {
         background: linear-gradient(135deg, 
-            $accent-merlot 0%, 
-            $accent-dark 100%
+            $acento-merlot 0%, 
+            $acento-oscuro 100%
         );
-        color: $soft-gold; // Mismo estilo que las cards de productos
+        color: $oro-suave !important;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1.5px;
         border-radius: 0 0 20px 20px;
-        transition: all $transition-duration ease;
+        transition: all $duracion-transicion ease;
         position: relative;
         overflow: hidden;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); // Más sombra para mejor legibilidad
@@ -374,21 +370,21 @@
             height: 100%;
             background: linear-gradient(90deg, 
                 transparent, 
-                rgba($soft-gold, 0.2), 
+                rgba($oro-suave, 0.2), 
                 transparent
             );
-            transition: left $transition-duration ease;
+            transition: left $duracion-transicion ease;
         }
         
         &:hover {
             background: linear-gradient(135deg, 
-                $secondary-gold 0%, 
-                $soft-gold 100%
+                $oro-secundario 0%, 
+                $oro-suave 100%
             );
-            color: $accent-dark;
+            color: $acento-oscuro;
             text-decoration: none !important;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba($secondary-gold, 0.3);
+            box-shadow: 0 4px 15px rgba($oro-secundario, 0.3);
             
             &::before {
                 left: 100%;
@@ -400,17 +396,17 @@
 // Botones suaves
 .btn-success {
     background: linear-gradient(135deg, 
-        $secondary-gold 0%, 
-        $soft-gold 100%
+        $oro-secundario 0%, 
+        $oro-suave 100%
     );
     border: none;
-    color: $accent-dark;
+    color: $acento-oscuro;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     border-radius: 30px;
-    transition: all $transition-duration ease;
-    box-shadow: 0 4px 15px rgba($secondary-gold, 0.25);
+    transition: all $duracion-transicion ease;
+    box-shadow: 0 4px 15px rgba($oro-secundario, 0.25);
     position: relative;
     overflow: hidden;
     
@@ -426,17 +422,17 @@
             rgba(255,255,255,0.2), 
             transparent
         );
-        transition: left $transition-duration ease;
+        transition: left $duracion-transicion ease;
     }
     
     &:hover {
         background: linear-gradient(135deg, 
-            $soft-gold 0%, 
-            $rich-copper 100%
+            $oro-suave 0%, 
+            $cobre-rico 100%
         );
         transform: translateY(-2px); // Menos movimiento
-        box-shadow: 0 6px 20px rgba($secondary-gold, 0.35);
-        color: $accent-dark;
+        box-shadow: 0 6px 20px rgba($oro-secundario, 0.35);
+        color: $acento-oscuro;
         
         &::before {
             left: 100%;
@@ -446,24 +442,24 @@
 
 .btn-primary {
     background: linear-gradient(135deg, 
-        $primary-wine 0%, 
-        $accent-merlot 100%
+        $vino-primario 0%, 
+        $acento-merlot 100%
     );
     border: none;
-    color: $soft-gold;
+    color: $oro-suave;
     border-radius: 30px;
-    transition: all $transition-duration ease;
-    box-shadow: 0 4px 15px rgba($primary-wine, 0.3);
+    transition: all $duracion-transicion ease;
+    box-shadow: 0 4px 15px rgba($vino-primario, 0.3);
     font-weight: 600;
     
     &:hover {
         background: linear-gradient(135deg, 
-            $accent-merlot 0%, 
-            $accent-dark 100%
+            $acento-merlot 0%, 
+            $acento-oscuro 100%
         );
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba($primary-wine, 0.4);
-        color: $soft-gold;
+        box-shadow: 0 6px 20px rgba($vino-primario, 0.4);
+        color: $oro-suave;
     }
 }
 
@@ -478,32 +474,32 @@
 .form-control {
     padding: 1.2rem;
     font-size: 1.6rem;
-    border: 2px solid $secondary-gold;
+    border: 2px solid $oro-secundario;
     border-radius: 12px;
-    transition: all $transition-duration ease;
+    transition: all $duracion-transicion ease;
     background: linear-gradient(135deg, 
-        rgba($pearl-white, 0.95) 0%, 
-        rgba($warm-cream, 0.9) 100%
+        rgba($blanco-perla, 0.95) 0%, 
+        rgba($crema-calido, 0.9) 100%
     );
-    color: $accent-dark !important; // Texto muy oscuro para contraste
+    color: $acento-oscuro !important; // Texto muy oscuro para contraste
     backdrop-filter: blur(3px);
     
     &:focus {
-        border-color: $soft-gold;
-        box-shadow: 0 0 0 0.2rem rgba($secondary-gold, 0.3);
-        background: rgba($pearl-white, 0.98);
+        border-color: $oro-suave;
+        box-shadow: 0 0 0 0.2rem rgba($oro-secundario, 0.3);
+        background: rgba($blanco-perla, 0.98);
         outline: none;
-        color: $accent-dark !important;
+        color: $acento-oscuro !important;
     }
     
     &::placeholder {
-        color: rgba($accent-dark, 0.6) !important; // Placeholder muy legible
+        color: rgba($acento-oscuro, 0.6) !important; // Placeholder muy legible
     }
 }
 
 // Labels del formulario MUY LEGIBLES
 .form-label {
-    color: $pearl-white !important;
+    color: $blanco-perla !important;
     font-weight: 600 !important;
     font-size: 1.4rem !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
@@ -513,12 +509,12 @@
 // Footer con CONTRASTE PERFECTO
 footer {
     background: linear-gradient(135deg, 
-        $accent-dark 0%, 
-        $primary-wine 30%,
-        $accent-merlot 70%,
-        $midnight-blue 100%
+        $acento-oscuro 0%, 
+        $vino-primario 30%,
+        $acento-merlot 70%,
+        $azul-medianoche 100%
     );
-    color: $ivory-luxury;
+    color: $marfil-lujo;
     position: relative;
     
     // Patrón más suave
@@ -530,8 +526,8 @@ footer {
         right: 0;
         bottom: 0;
         background-image: 
-            radial-gradient(circle at 20% 80%, rgba($secondary-gold, 0.04) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba($soft-gold, 0.03) 0%, transparent 50%);
+            radial-gradient(circle at 20% 80%, rgba($oro-secundario, 0.04) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba($oro-suave, 0.03) 0%, transparent 50%);
     }
     
     * {
@@ -540,7 +536,7 @@ footer {
     }
     
     h3 {
-        color: $soft-gold; // Mejor contraste
+        color: $oro-suave; // Mejor contraste
         font-size: 2.2rem;
         margin-bottom: 2.5rem;
         font-weight: 600;
@@ -550,8 +546,8 @@ footer {
     // OVERRIDE ESPECÍFICO para enlaces .text-dark en footer
     a,
     a.text-dark {
-        color: $pearl-white !important; // ¡FUERZA el color claro!
-        transition: all $transition-duration ease;
+        color: $blanco-perla !important; // ¡FUERZA el color claro!
+        transition: all $duracion-transicion ease;
         position: relative;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
         font-weight: 500;
@@ -563,15 +559,15 @@ footer {
             left: 0;
             width: 0;
             height: 1px;
-            background: linear-gradient(90deg, $secondary-gold, $soft-gold);
-            transition: width $transition-duration ease;
+            background: linear-gradient(90deg, $oro-secundario, $oro-suave);
+            transition: width $duracion-transicion ease;
         }
         
         &:hover {
-            color: $soft-gold !important; // ¡FUERZA el hover dorado!
+            color: $oro-suave !important; // ¡FUERZA el hover dorado!
             text-decoration: none;
             transform: translateX(3px);
-            text-shadow: 0 0 8px rgba($soft-gold, 0.4) !important;
+            text-shadow: 0 0 8px rgba($oro-suave, 0.4) !important;
             
             &::after {
                 width: 100%;
@@ -581,7 +577,7 @@ footer {
     
     // Párrafos con excelente contraste
     p {
-        color: rgba($pearl-white, 0.9) !important; // Mejor contraste
+        color: rgba($blanco-perla, 0.9) !important; // Mejor contraste
         font-weight: 400;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
         font-size: 1.6rem;
@@ -592,20 +588,20 @@ footer {
 .form-check-input[type="radio"] {
     width: 2rem !important;
     height: 2rem !important;
-    border: 3px solid $secondary-gold !important;
-    background-color: rgba($pearl-white, 0.9) !important;
+    border: 3px solid $oro-secundario !important;
+    background-color: rgba($blanco-perla, 0.9) !important;
     border-radius: 50% !important;
-    transition: all $transition-duration ease !important;
+    transition: all $duracion-transicion ease !important;
     
     &:checked {
-        background-color: $soft-gold !important;
-        border-color: $secondary-gold !important;
-        box-shadow: 0 0 0 0.3rem rgba($secondary-gold, 0.3) !important;
+        background-color: $oro-suave !important;
+        border-color: $oro-secundario !important;
+        box-shadow: 0 0 0 0.3rem rgba($oro-secundario, 0.3) !important;
     }
     
     &:focus {
-        border-color: $soft-gold !important;
-        box-shadow: 0 0 0 0.2rem rgba($secondary-gold, 0.2) !important;
+        border-color: $oro-suave !important;
+        box-shadow: 0 0 0 0.2rem rgba($oro-secundario, 0.2) !important;
     }
 }
 
@@ -616,18 +612,18 @@ fieldset:last-of-type .mb-3 {
     gap: 1.5rem !important;
     padding: 1.2rem !important;
     background: linear-gradient(135deg, 
-        rgba($rich-slate, 0.4) 0%, 
-        rgba($warm-charcoal, 0.3) 100%
+        rgba($pizarra-rica, 0.4) 0%, 
+        rgba($carbon-calido, 0.3) 100%
     ) !important;
     border-radius: 12px !important;
-    border: 2px solid rgba($secondary-gold, 0.3) !important;
-    transition: all $transition-duration ease !important;
+    border: 2px solid rgba($oro-secundario, 0.3) !important;
+    transition: all $duracion-transicion ease !important;
     
     &:hover {
-        border-color: rgba($soft-gold, 0.5) !important;
+        border-color: rgba($oro-suave, 0.5) !important;
         background: linear-gradient(135deg, 
-            rgba($rich-slate, 0.5) 0%, 
-            rgba($warm-charcoal, 0.4) 100%
+            rgba($pizarra-rica, 0.5) 0%, 
+            rgba($carbon-calido, 0.4) 100%
         ) !important;
     }
     
@@ -641,10 +637,25 @@ fieldset:last-of-type .mb-3 {
 }
 
 // Mejorar contraste en páginas principales
+// Sección nosotros con contraste simple
+.nosotros-content {
+    p {
+        color: #2a1219 !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 500 !important;
+        line-height: 1.8 !important;
+        font-size: 1.6rem !important;
+        padding: 1.5rem !important;
+        border-radius: 8px !important;
+        margin-bottom: 2rem !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
 main {
     // Párrafos principales MUY LEGIBLES
     p {
-        color: $pearl-white !important;
+        color: $blanco-perla !important;
         font-size: 1.6rem !important;
         line-height: 1.8 !important;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
@@ -654,7 +665,7 @@ main {
     
     // Títulos principales perfectamente contrastados
     h1, h2, h3 {
-        color: $soft-gold !important;
+        color: $oro-suave !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
     }
 }
