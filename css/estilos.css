@@ -369,8 +369,9 @@ section:not(:first-child):not(.imagen-principal)::before {
 }
 .categoria a:hover {
   background: linear-gradient(135deg, #c9a961 0%, #e6c878 100%);
-  color: #2a1219;
+  color: #000000 !important;
   text-decoration: none !important;
+  text-shadow: none !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
 }
@@ -931,4 +932,4 @@ main h1, main h2, main h3 {
  * Versión: 2.0
  */
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=estilos.css.map */

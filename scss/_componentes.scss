@@ -381,8 +381,9 @@
                 $oro-secundario 0%, 
                 $oro-suave 100%
             );
-            color: $acento-oscuro;
+            color: #000000 !important;
             text-decoration: none !important;
+            text-shadow: none !important;
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba($oro-secundario, 0.3);
             
