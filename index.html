@@ -20,8 +20,8 @@
 
     <div class="border-top py-4">
         <div class="navbar navbar-expand-lg container navbar-light ">
-            <a class="navbar-brand d-lg-none" href="index.html">
-                <img src="./img/logo.png" alt="Logo de Norman Wines" style="height: 120px;">
+            <a class="navbar-brand d-lg-none" href="index.html" aria-label="Volver al inicio - Norman Wines">
+                <img src="./img/logo.png" alt="Logo de Norman Wines - Bodega Premium" style="height: 120px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
                 <span class="navbar-toggler-icon"></span>
@@ -42,13 +42,13 @@
 
     <main class="container-xl py-5">
         <!-- Imagen principal elegante -->
-        <section class="imagen-principal mb-5">
-            <div class="position-relative overflow-hidden rounded-4 shadow-lg">
-                <img src="./img/principal.jpg" alt="Norman Wines - Viñedos" class="img-fluid w-100" style="height: 400px; object-fit: cover;">
+        <section class="imagen-principal mb-5 animate-fade-in">
+            <div class="position-relative overflow-hidden rounded-xl shadow-wine">
+                <img src="./img/principal.jpg" alt="Viñedos de Norman Wines al atardecer con hileras de vides y montañas de fondo" class="img-fluid w-100" style="height: 400px; object-fit: cover;">
                 <div class="overlay-elegante position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                     <div class="text-center text-white">
-                        <h2 class="display-4 fw-bold mb-3">Bienvenidos a Norman Wines</h2>
-                        <p class="lead">Tradición, calidad y pasión en cada copa</p>
+                        <h2 class="display-4 fw-bold mb-3 title-gold">Bienvenidos a Norman Wines</h2>
+                        <p class="lead text-lg">Tradición, calidad y pasión en cada copa</p>
                     </div>
                 </div>
             </div>
@@ -56,29 +56,29 @@
         
         <h1 class="text-center my-5">Nuestros Productos</h1>
 
-        <div class="row g-0 pt-5 mb-4">
-            <div class="col-md-8 producto">
-                <img class="img-fluid" src="img/producto1.png" alt="imagen producto">
+        <div class="row g-0 pt-5 mb-4 animate-slide-up">
+            <div class="col-md-8 producto hover-wine">
+                <img class="img-fluid" src="img/producto1.png" alt="Botella de Norman Wines Merlot con etiqueta dorada y fondo de viñedos">
             </div>
-            <div class="col-md-4 bg-primary text-center p-5 text-white d-flex flex-column justify-content-center">
-                <h3>Norman Wines Merlot</h3>
-                <p>Desde los viñedos bañados por el sol del atardecer, nace nuestro Merlot, un tinto elegante de cuerpo medio, con notas de cereza negra, ciruela madura y un suave final especiado. Ideal para acompañar carnes rojas o disfrutar solo al final del día.</p>
-                <p class="fs-1 fw-bold">$12,000.00</p>
-                <a class="btn btn-success fs-3 fw-bold text-uppercase py-3" href="#">Agregar al carrito</a>
+            <div class="col-md-4 bg-primary text-center p-wine-5 text-white d-flex flex-column justify-content-center">
+                <h3 class="title-gold">Norman Wines Merlot</h3>
+                <p class="text-base">Desde los viñedos bañados por el sol del atardecer, nace nuestro Merlot, un tinto elegante de cuerpo medio, con notas de cereza negra, ciruela madura y un suave final especiado. Ideal para acompañar carnes rojas o disfrutar solo al final del día.</p>
+                <p class="text-4xl fw-bold text-gold-soft">$12,000.00</p>
+                <a class="btn btn-success text-2xl fw-bold text-uppercase py-wine-3" href="#" aria-label="Agregar Norman Wines Merlot al carrito de compras">Agregar al carrito</a>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6 mb-4">
-                <div class="card">
+                <div class="card shadow-medium animate-fade-in">
                     
-                    <img class="card-img-top" src="img/producto2.png" alt="imagen producto">
+                    <img class="card-img-top" src="img/producto2.png" alt="Botella de Norman Wines Chardonnay con etiqueta elegante en fondo de barrica de roble">
 
-                    <div class="card-body text-center bg-primary text-white p-5">
-                        <h3>Norman Wines Chardonnay</h3>
-                        <p>Cosechado en su punto justo, nuestro Chardonnay resplandece con aromas de frutas blancas, manteca fresca y un delicado toque de vainilla. Fermentado en barricas, es un vino sedoso que combina a la perfección con pescados, quesos suaves y momentos especiales.</p>
-                        <p class="fs-1 fw-bold">$12,000.00</p>
-                        <a class="btn btn-success fs-3 fw-bold text-uppercase py-3 w-100" href="#">Agregar al carrito</a>
+                    <div class="card-body text-center bg-primary text-white p-wine-5">
+                        <h3 class="title-gold">Norman Wines Chardonnay</h3>
+                        <p class="text-base">Cosechado en su punto justo, nuestro Chardonnay resplandece con aromas de frutas blancas, manteca fresca y un delicado toque de vainilla. Fermentado en barricas, es un vino sedoso que combina a la perfección con pescados, quesos suaves y momentos especiales.</p>
+                        <p class="text-4xl fw-bold text-gold-soft">$12,000.00</p>
+                        <a class="btn btn-success text-2xl fw-bold text-uppercase py-wine-3 w-100" href="#" aria-label="Agregar Norman Wines Chardonnay al carrito de compras">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
@@ -141,32 +141,32 @@
 
         <div class="row mt-5">
             <div class="col-md-4 px-3 mb-4">
-                <div class="categoria">
+                <div class="categoria shadow-soft animate-slide-up">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="img/categoria1.png" alt="imagen categoria">
+                        <img class="img-fluid" src="img/categoria1.png" alt="Copas de vino tinto con uvas rojas y barricas de roble al fondo">
                     </div>
 
-                    <a class="fs-2 text-decoration-none text-center d-block py-3" href="#">Tinto</a>
+                    <a class="text-2xl text-decoration-none text-center d-block py-wine-3" href="#" aria-label="Ver todos los vinos tintos">Tinto</a>
                 </div>
             </div>
 
             <div class="col-md-4 px-3 mb-4">
-                <div class="categoria">
+                <div class="categoria shadow-soft animate-slide-up">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="img/categoria2.png" alt="imagen categoria">
+                        <img class="img-fluid" src="img/categoria2.png" alt="Copas de vino blanco con uvas verdes y paisaje de viñedos">
                     </div>
 
-                    <a class="fs-2 text-decoration-none text-center d-block py-3" href="#">Blanco</a>
+                    <a class="text-2xl text-decoration-none text-center d-block py-wine-3" href="#" aria-label="Ver todos los vinos blancos">Blanco</a>
                 </div>
             </div>
 
             <div class="col-md-4 px-3 mb-4">
-                <div class="categoria">
+                <div class="categoria shadow-soft animate-slide-up">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="img/categoria3.png" alt="imagen categoria">
+                        <img class="img-fluid" src="img/categoria3.png" alt="Copas de vino rosado con flores rosadas y ambiente primaveral">
                     </div>
 
-                    <a class="fs-2 text-decoration-none text-center d-block py-3" href="#">Rosado</a>
+                    <a class="text-2xl text-decoration-none text-center d-block py-wine-3" href="#" aria-label="Ver todos los vinos rosados">Rosado</a>
                 </div>
             </div>
         </div>

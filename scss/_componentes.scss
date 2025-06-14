@@ -207,48 +207,9 @@
     }
 }
 
-// Cards SUAVES - SIN MOVIMIENTO EXCESIVO (como quiere el usuario)
+// Cards SUAVES usando mixins
 .card {
-    border: none;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-    transition: all $duracion-transicion ease;
-    background: linear-gradient(135deg, 
-        $pizarra-rica 0%, 
-        $carbon-calido 100%
-    );
-    position: relative;
-    
-    // Borde suave
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, 
-            rgba($oro-secundario, 0.08) 0%, 
-            transparent 50%,
-            rgba($oro-suave, 0.04) 100%
-        );
-        border-radius: 20px;
-        pointer-events: none;
-    }
-    
-    // HOVER SUAVE - solo sombra y brillo sutil, SIN MOVIMIENTO
-    &:hover {
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-        
-        &::before {
-            background: linear-gradient(135deg, 
-                rgba($oro-secundario, 0.12) 0%, 
-                rgba($oro-suave, 0.06) 50%,
-                rgba($oro-secundario, 0.08) 100%
-            );
-        }
-    }
+    @include card-elegant(20px);
     
     .card-img-top {
         transition: transform $duracion-transicion ease;
@@ -394,74 +355,14 @@
     }
 }
 
-// Botones suaves
+// Botones suaves usando mixins
 .btn-success {
-    background: linear-gradient(135deg, 
-        $oro-secundario 0%, 
-        $oro-suave 100%
-    );
-    border: none;
-    color: $acento-oscuro;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    border-radius: 30px;
-    transition: all $duracion-transicion ease;
-    box-shadow: 0 4px 15px rgba($oro-secundario, 0.25);
-    position: relative;
-    overflow: hidden;
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, 
-            transparent, 
-            rgba(255,255,255,0.2), 
-            transparent
-        );
-        transition: left $duracion-transicion ease;
-    }
-    
-    &:hover {
-        background: linear-gradient(135deg, 
-            $oro-suave 0%, 
-            $cobre-rico 100%
-        );
-        transform: translateY(-2px); // Menos movimiento
-        box-shadow: 0 6px 20px rgba($oro-secundario, 0.35);
-        color: $acento-oscuro;
-        
-        &::before {
-            left: 100%;
-        }
-    }
+    @include button-elegant($oro-secundario, $acento-oscuro, $oro-suave);
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, 
-        $vino-primario 0%, 
-        $acento-merlot 100%
-    );
-    border: none;
-    color: $oro-suave;
-    border-radius: 30px;
-    transition: all $duracion-transicion ease;
-    box-shadow: 0 4px 15px rgba($vino-primario, 0.3);
-    font-weight: 600;
-    
-    &:hover {
-        background: linear-gradient(135deg, 
-            $acento-merlot 0%, 
-            $acento-oscuro 100%
-        );
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba($vino-primario, 0.4);
-        color: $oro-suave;
-    }
+    @include button-elegant($vino-primario, $oro-suave, $acento-merlot);
+    @include gradient-wine();
 }
 
 // Galería

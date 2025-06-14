@@ -1,9 +1,11 @@
 // Archivo principal SASS - Norman Wines
 
-// Importar todos los archivos parciales
-@import 'variables';  // Variables y configuración
-@import 'base';       // Estilos base y tipografía
+// Importar todos los archivos parciales en orden de dependencia
+@import 'variables';   // Variables y configuración (primero)
+@import 'mixins';      // Mixins y funciones (segundo, depende de variables)
+@import 'base';        // Estilos base y tipografía
 @import 'componentes'; // Componentes específicos
+@import 'helpers';     // Helpers con @extend y operadores SASS
 @import 'utilidades';  // Utilidades y clases auxiliares
 
 /* 

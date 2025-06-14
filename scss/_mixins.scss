@@ -1,0 +1,227 @@
+// ==================================================
+// MIXINS - NORMAN WINES
+// ==================================================
+
+// Mixin para gradientes reutilizables
+@mixin gradient-wine($direction: 135deg, $color1: $vino-primario, $color2: $acento-merlot) {
+    background: linear-gradient($direction, $color1 0%, $color2 100%);
+}
+
+@mixin gradient-gold($direction: 135deg) {
+    background: linear-gradient($direction, $oro-secundario 0%, $oro-suave 100%);
+}
+
+@mixin gradient-charcoal($direction: 135deg) {
+    background: linear-gradient($direction, $carbon-profundo 0%, $carbon-calido 100%);
+}
+
+// Mixin para sombras consistentes
+@mixin box-shadow-soft($x: 0, $y: 6px, $blur: 25px, $color: rgba(0, 0, 0, 0.25)) {
+    box-shadow: $x $y $blur $color;
+}
+
+@mixin box-shadow-hover($x: 0, $y: 10px, $blur: 35px, $color: rgba(0, 0, 0, 0.35)) {
+    box-shadow: $x $y $blur $color;
+}
+
+@mixin text-shadow-wine() {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+@mixin text-shadow-gold() {
+    text-shadow: 0 2px 4px rgba($oro-secundario, 0.4);
+}
+
+// Mixin para transiciones suaves
+@mixin transition-smooth($property: all, $duration: $duracion-transicion, $timing: ease) {
+    transition: $property $duration $timing;
+}
+
+// Mixin para hover effects
+@mixin hover-lift($translate-y: -3px) {
+    @include transition-smooth();
+    
+    &:hover {
+        transform: translateY($translate-y);
+        @include box-shadow-hover();
+    }
+}
+
+@mixin hover-glow($color: $oro-secundario, $opacity: 0.3) {
+    @include transition-smooth();
+    
+    &:hover {
+        box-shadow: 0 0 20px rgba($color, $opacity);
+        filter: brightness(1.05);
+    }
+}
+
+// Mixin para centrar elementos
+@mixin center-flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// Mixin para responsive breakpoints
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (max-width: #{$movil - 1px}) {
+            @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media (min-width: #{$movil}) and (max-width: #{$tablet - 1px}) {
+            @content;
+        }
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: #{$tablet}) {
+            @content;
+        }
+    }
+    @if $breakpoint == large {
+        @media (min-width: #{$escritorio}) {
+            @content;
+        }
+    }
+}
+
+// Mixin para botones elegantes
+@mixin button-elegant($bg-color: $oro-secundario, $text-color: $acento-oscuro, $hover-bg: $oro-suave) {
+    @include gradient-gold();
+    border: none;
+    color: $text-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 30px;
+    @include transition-smooth();
+    @include box-shadow-soft(0, 4px, 15px, rgba($bg-color, 0.25));
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left $duracion-transicion ease;
+    }
+    
+    &:hover {
+        background: linear-gradient(135deg, $hover-bg 0%, $cobre-rico 100%);
+        transform: translateY(-2px);
+        @include box-shadow-hover(0, 6px, 20px, rgba($bg-color, 0.35));
+        color: $text-color;
+        
+        &::before {
+            left: 100%;
+        }
+    }
+}
+
+// Mixin para cards elegantes
+@mixin card-elegant($border-radius: 20px) {
+    border: none;
+    border-radius: $border-radius;
+    overflow: hidden;
+    @include box-shadow-soft();
+    @include transition-smooth();
+    @include gradient-charcoal();
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, 
+            rgba($oro-secundario, 0.08) 0%, 
+            transparent 50%,
+            rgba($oro-suave, 0.04) 100%
+        );
+        border-radius: $border-radius;
+        pointer-events: none;
+    }
+    
+    &:hover {
+        @include box-shadow-hover();
+        
+        &::before {
+            background: linear-gradient(135deg, 
+                rgba($oro-secundario, 0.12) 0%, 
+                rgba($oro-suave, 0.06) 50%,
+                rgba($oro-secundario, 0.08) 100%
+            );
+        }
+    }
+}
+
+// Mixin para overlay elegantes
+@mixin overlay-elegant($color1: $acento-oscuro, $color2: $vino-primario, $opacity1: 0.8, $opacity2: 0.6) {
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, 
+            rgba($color1, $opacity1) 0%, 
+            rgba($color2, $opacity2) 40%,
+            rgba($acento-merlot, 0.4) 80%,
+            rgba($oro-secundario, 0.1) 100%
+        );
+        z-index: 1;
+    }
+    
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+// Mixin para animaciones
+@mixin animate-fade-in($duration: 1s, $delay: 0s) {
+    animation: fadeInSoft $duration ease-out $delay;
+}
+
+@mixin animate-slide-up($duration: 0.8s, $delay: 0s) {
+    animation: slideUpSoft $duration ease-out $delay;
+}
+
+// Mixin para glassmorphism
+@mixin glass-effect($blur: 8px, $opacity: 0.08) {
+    background: rgba($pizarra-rica, $opacity);
+    backdrop-filter: blur($blur);
+    border: 1px solid rgba($oro-secundario, 0.15);
+    border-radius: 12px;
+}
+
+// Función para calcular contraste de colores
+@function contrast-color($color) {
+    @if (lightness($color) > 50%) {
+        @return $acento-oscuro;
+    } @else {
+        @return $marfil-lujo;
+    }
+}
+
+// Función para oscurecer colores
+@function darken-wine($color, $amount: 10%) {
+    @return darken($color, $amount);
+}
+
+// Función para aclarar colores
+@function lighten-gold($color, $amount: 10%) {
+    @return lighten($color, $amount);
+} 

@@ -1,0 +1,315 @@
+// ==================================================
+// HELPERS Y EXTENSIONES - NORMAN WINES
+// ==================================================
+
+// Placeholders para @extend
+%button-base {
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 30px;
+    @include transition-smooth();
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+%card-base {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    @include box-shadow-soft();
+    @include transition-smooth();
+    position: relative;
+}
+
+%text-elegant {
+    font-family: $fuente-titulos;
+    font-weight: 700;
+    @include text-shadow-wine();
+}
+
+%flex-center {
+    @include center-flex();
+}
+
+%hover-lift-base {
+    @include transition-smooth();
+    
+    &:hover {
+        transform: translateY(-3px);
+        @include box-shadow-hover();
+    }
+}
+
+// Uso de operadores SASS - Generación dinámica de clases
+$wine-colors: (
+    'primary': $vino-primario,
+    'merlot': $acento-merlot,
+    'dark': $acento-oscuro,
+    'forest': $acento-bosque
+);
+
+$gold-colors: (
+    'secondary': $oro-secundario,
+    'soft': $oro-suave,
+    'copper': $cobre-rico
+);
+
+$neutral-colors: (
+    'charcoal': $carbon-profundo,
+    'warm-charcoal': $carbon-calido,
+    'slate': $pizarra-rica,
+    'midnight': $azul-medianoche
+);
+
+// Generación dinámica de clases de colores de fondo usando @each
+@each $name, $color in $wine-colors {
+    .bg-wine-#{$name} {
+        background-color: $color !important;
+        color: contrast-color($color) !important;
+    }
+    
+    .border-wine-#{$name} {
+        border-color: $color !important;
+    }
+    
+    .text-wine-#{$name} {
+        color: $color !important;
+    }
+}
+
+@each $name, $color in $gold-colors {
+    .bg-gold-#{$name} {
+        background-color: $color !important;
+        color: contrast-color($color) !important;
+    }
+    
+    .border-gold-#{$name} {
+        border-color: $color !important;
+    }
+    
+    .text-gold-#{$name} {
+        color: $color !important;
+    }
+}
+
+@each $name, $color in $neutral-colors {
+    .bg-neutral-#{$name} {
+        background-color: $color !important;
+        color: contrast-color($color) !important;
+    }
+    
+    .border-neutral-#{$name} {
+        border-color: $color !important;
+    }
+    
+    .text-neutral-#{$name} {
+        color: $color !important;
+    }
+}
+
+// Generación dinámica de espaciado usando @each
+$spacings: (1, 2, 3, 4, 5, 6, 8, 10);
+
+@each $spacing in $spacings {
+    .p-wine-#{$spacing} {
+        padding: #{$spacing * 0.5}rem !important;
+    }
+    
+    .m-wine-#{$spacing} {
+        margin: #{$spacing * 0.5}rem !important;
+    }
+    
+    .py-wine-#{$spacing} {
+        padding-top: #{$spacing * 0.5}rem !important;
+        padding-bottom: #{$spacing * 0.5}rem !important;
+    }
+    
+    .px-wine-#{$spacing} {
+        padding-left: #{$spacing * 0.5}rem !important;
+        padding-right: #{$spacing * 0.5}rem !important;
+    }
+}
+
+// Generación dinámica de sombras usando @each
+$shadow-levels: (
+    'soft': (0, 4px, 15px, rgba(0, 0, 0, 0.15)),
+    'medium': (0, 6px, 25px, rgba(0, 0, 0, 0.25)),
+    'hard': (0, 10px, 35px, rgba(0, 0, 0, 0.35)),
+    'wine': (0, 4px, 20px, rgba($vino-primario, 0.3)),
+    'gold': (0, 4px, 20px, rgba($oro-secundario, 0.3))
+);
+
+@each $name, $shadow-values in $shadow-levels {
+    .shadow-#{$name} {
+        box-shadow: nth($shadow-values, 1) nth($shadow-values, 2) nth($shadow-values, 3) nth($shadow-values, 4) !important;
+    }
+}
+
+// Clases que usan @extend para reutilización
+.btn-wine-elegant {
+    @extend %button-base;
+    @include gradient-wine();
+    color: $oro-suave;
+    
+    &:hover {
+        @include gradient-wine(135deg, $acento-merlot, $acento-oscuro);
+        transform: translateY(-2px);
+        @include box-shadow-hover();
+        color: $oro-suave;
+    }
+}
+
+.btn-gold-elegant {
+    @extend %button-base;
+    @include gradient-gold();
+    color: $acento-oscuro;
+    
+    &:hover {
+        background: linear-gradient(135deg, $oro-suave 0%, $cobre-rico 100%);
+        transform: translateY(-2px);
+        @include box-shadow-hover();
+        color: $acento-oscuro;
+    }
+}
+
+.card-wine-elegant {
+    @extend %card-base;
+    @include gradient-wine();
+    color: $marfil-lujo;
+    
+    &:hover {
+        @include box-shadow-hover();
+    }
+}
+
+.card-neutral-elegant {
+    @extend %card-base;
+    @include gradient-charcoal();
+    color: $marfil-lujo;
+    
+    &:hover {
+        @include box-shadow-hover();
+    }
+}
+
+.title-wine {
+    @extend %text-elegant;
+    color: $oro-secundario;
+}
+
+.title-gold {
+    @extend %text-elegant;
+    color: $oro-suave;
+}
+
+.flex-center-wine {
+    @extend %flex-center;
+}
+
+.hover-wine {
+    @extend %hover-lift-base;
+}
+
+// Generación dinámica de tamaños de fuente usando operadores
+$font-sizes: (
+    'xs': 1.2,
+    'sm': 1.4,
+    'base': 1.6,
+    'lg': 1.8,
+    'xl': 2.0,
+    '2xl': 2.4,
+    '3xl': 3.0,
+    '4xl': 3.6,
+    '5xl': 4.8
+);
+
+@each $size-name, $size-value in $font-sizes {
+    .text-#{$size-name} {
+        font-size: #{$size-value}rem !important;
+    }
+}
+
+// Generación dinámica de border-radius usando @each
+$border-radius: (
+    'sm': 8px,
+    'md': 12px,
+    'lg': 16px,
+    'xl': 20px,
+    '2xl': 24px,
+    'full': 50px
+);
+
+@each $radius-name, $radius-value in $border-radius {
+    .rounded-#{$radius-name} {
+        border-radius: $radius-value !important;
+    }
+}
+
+// Generación de clases para animaciones usando @each
+$animations: (
+    'fade-in': (fadeInSoft, 1s, ease-out),
+    'slide-up': (slideUpSoft, 0.8s, ease-out),
+    'glow': (glowSoft, 3s, ease-in-out),
+    'float': (floatGentle, 4s, ease-in-out)
+);
+
+@each $anim-name, $anim-values in $animations {
+    .animate-#{$anim-name} {
+        animation: nth($anim-values, 1) nth($anim-values, 2) nth($anim-values, 3);
+        
+        @if $anim-name == 'glow' or $anim-name == 'float' {
+            animation-iteration-count: infinite;
+        }
+        
+        @if $anim-name == 'glow' {
+            animation-direction: alternate;
+        }
+    }
+}
+
+// Mapa para breakpoints y generación de clases responsive
+$breakpoints: (
+    'sm': $movil,
+    'md': $tablet,
+    'lg': $escritorio
+);
+
+// Generación de clases de display responsive usando @each
+$display-values: (block, inline-block, flex, inline-flex, grid, none);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+    @each $display in $display-values {
+        .d-#{$breakpoint-name}-#{$display} {
+            @media (min-width: $breakpoint-value) {
+                display: $display !important;
+            }
+        }
+    }
+}
+
+// Clases helper para estados
+.state-success {
+    color: $exito-esmeralda !important;
+    border-color: $exito-esmeralda !important;
+}
+
+.state-warning {
+    color: $advertencia-ambar !important;
+    border-color: $advertencia-ambar !important;
+}
+
+.state-danger {
+    color: $peligro-vino !important;
+    border-color: $peligro-vino !important;
+}
+
+.state-info {
+    color: $info-acero !important;
+    border-color: $info-acero !important;
+} 
