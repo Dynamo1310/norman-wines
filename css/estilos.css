@@ -206,37 +206,42 @@ section:not(:first-child):not(.imagen-principal)::before {
 .navbar-toggler-icon {
   background-image: none !important;
   position: relative;
-  width: 24px !important;
+  width: 26px !important;
   height: 18px !important;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.navbar-toggler-icon::before, .navbar-toggler-icon::after, .navbar-toggler-icon {
   background: #e6c878 !important;
+  height: 3px !important;
   border-radius: 2px;
-  height: 3px;
-  position: absolute;
   transition: all 400ms ease;
-  width: 100%;
+}
+.navbar-toggler-icon::before, .navbar-toggler-icon::after {
   content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e6c878;
+  border-radius: 2px;
+  transition: all 400ms ease;
 }
 .navbar-toggler-icon::before {
-  top: 0;
+  top: -7px;
 }
 .navbar-toggler-icon::after {
-  bottom: 0;
+  bottom: -7px;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  background: #c9a961 !important;
+}
+.navbar-toggler:hover .navbar-toggler-icon::before, .navbar-toggler:hover .navbar-toggler-icon::after {
+  background: #c9a961;
 }
 
 .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
-  background: transparent !important;
+  background: #c9a961 !important;
 }
-.navbar-toggler[aria-expanded=true] .navbar-toggler-icon::before {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-.navbar-toggler[aria-expanded=true] .navbar-toggler-icon::after {
-  bottom: 50%;
-  transform: translateY(50%) rotate(-45deg);
+.navbar-toggler[aria-expanded=true] .navbar-toggler-icon::before, .navbar-toggler[aria-expanded=true] .navbar-toggler-icon::after {
+  background: #c9a961;
 }
 
 @media (max-width: 767px) {
