@@ -111,6 +111,153 @@
     }
 }
 
+// Hamburguesa personalizada elegante
+.navbar-toggler {
+    border: 2px solid $oro-secundario !important;
+    border-radius: 12px !important;
+    padding: 0.8rem !important;
+    background: linear-gradient(135deg, 
+        rgba($vino-primario, 0.9) 0%, 
+        rgba($acento-merlot, 0.8) 100%
+    ) !important;
+    backdrop-filter: blur(8px);
+    @include box-shadow-soft(0, 4px, 15px, rgba($oro-secundario, 0.3));
+    @include transition-smooth();
+    
+    &:hover {
+        background: linear-gradient(135deg, 
+            rgba($oro-secundario, 0.9) 0%, 
+            rgba($oro-suave, 0.8) 100%
+        ) !important;
+        border-color: $oro-suave !important;
+        transform: translateY(-2px);
+        @include box-shadow-hover(0, 6px, 20px, rgba($oro-secundario, 0.4));
+    }
+    
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($oro-secundario, 0.4) !important;
+    }
+}
+
+// Ícono de hamburguesa personalizado
+.navbar-toggler-icon {
+    background-image: none !important;
+    position: relative;
+    width: 24px !important;
+    height: 18px !important;
+    
+    &::before,
+    &::after,
+    & {
+        background: $oro-suave !important;
+        border-radius: 2px;
+        height: 3px;
+        position: absolute;
+        transition: all $duracion-transicion ease;
+        width: 100%;
+        content: '';
+    }
+    
+    &::before {
+        top: 0;
+    }
+    
+    &::after {
+        bottom: 0;
+    }
+    
+    // Posición del medio (el elemento mismo)
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Animación cuando está abierto
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent !important;
+    
+    &::before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    
+    &::after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+}
+
+// Menú móvil desplegable elegante
+.navbar-collapse {
+    @media (max-width: #{$movil - 1px}) {
+        background: linear-gradient(135deg, 
+            rgba($vino-primario, 0.95) 0%, 
+            rgba($acento-merlot, 0.92) 50%,
+            rgba($acento-oscuro, 0.9) 100%
+        );
+        backdrop-filter: blur(12px);
+        border-radius: 15px;
+        margin-top: 1rem;
+        padding: 2rem 1.5rem;
+        @include box-shadow-soft(0, 8px, 30px, rgba(0, 0, 0, 0.3));
+        border: 1px solid rgba($oro-secundario, 0.2);
+        
+        // Patrón sutil
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba($oro-secundario, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba($oro-suave, 0.06) 0%, transparent 50%);
+            border-radius: 15px;
+            pointer-events: none;
+        }
+        
+        .navbar-nav {
+            position: relative;
+            z-index: 1;
+            
+            a {
+                color: $oro-suave !important;
+                background: rgba($acento-oscuro, 0.4) !important;
+                border: 1px solid rgba($oro-secundario, 0.3);
+                margin: 0.5rem 0;
+                padding: 1.2rem 1.5rem !important;
+                font-size: 1.6rem;
+                font-weight: 600;
+                border-radius: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                @include text-shadow-wine();
+                @include transition-smooth();
+                
+                &::after {
+                    display: none; // Ocultar el efecto de línea en móvil
+                }
+                
+                &:hover {
+                    background: linear-gradient(135deg, 
+                        rgba($oro-secundario, 0.8) 0%, 
+                        rgba($oro-suave, 0.7) 100%
+                    ) !important;
+                    color: $acento-oscuro !important;
+                    border-color: $oro-suave;
+                    text-shadow: none;
+                    transform: translateX(5px);
+                    @include box-shadow-soft(0, 4px, 15px, rgba($oro-secundario, 0.4));
+                }
+                
+                &:active {
+                    transform: translateX(2px);
+                }
+            }
+        }
+    }
+}
+
 // Contenedor del navbar consistente
 .border-top.py-4 {
     padding-top: 2rem;
